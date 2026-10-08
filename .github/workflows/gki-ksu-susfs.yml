@@ -239,7 +239,7 @@ jobs:
         run: |
           set -euo pipefail
           rm -rf kernel_workspace && mkdir -p kernel_workspace && cd kernel_workspace
-          repo init -u "$MANIFEST_URL" -b "$MANIFEST_BRANCH" --depth=1
+          repo init -u https://android.googlesource.com/kernel/manifest -b android-gs-shusky-6.1-android16 --depth=1
           
           MAX_RETRIES=3
           for i in $(seq 1 $MAX_RETRIES); do
